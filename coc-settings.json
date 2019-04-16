@@ -1,0 +1,11 @@
+{
+  "languageserver": {
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
+     }
+   },
+   "html.format.enable": true,
+   "html.enable": true,
+   "coc.preferences.colorSupport": true
+}
