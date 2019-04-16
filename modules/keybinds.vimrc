@@ -134,7 +134,6 @@ let g:lmap.z = {
   \'name' : 'Extra Commmands',
   \'b' : ['Bracey', 'Start server'],
   \'r' : ['BraceyReload', 'Reload server'],
-  \'
 \}
 
 call leaderGuide#register_prefix_descriptions(",","g:lmap")
