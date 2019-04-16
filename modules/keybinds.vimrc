@@ -105,7 +105,6 @@ map , <Plug>(clever-f-repeat-back)
 
 " Markdown preview
 map <silent> <F8> <Plug>MarkdownPreview
-nmap gm :LivedownToggle<CR>
 
 nnoremap <Leader>x *``cgn
 nnoremap <Leader>X #``cgN
@@ -135,9 +134,8 @@ let g:lmap.z = {
   \'name' : 'Extra Commmands',
   \'b' : ['Bracey', 'Start server'],
   \'r' : ['BraceyReload', 'Reload server'],
+  \'
 \}
-
-"test comment
 
 call leaderGuide#register_prefix_descriptions(",","g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide ','<CR>
