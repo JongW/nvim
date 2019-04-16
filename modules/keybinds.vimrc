@@ -131,11 +131,13 @@ let g:lmap.g = {
 \}
 
 " Create new menus not based on existing mappings:
-let g:lmap.g = {
+let g:lmap.z = {
   \'name' : 'Extra Commmands',
   \'b' : ['Bracey', 'Start server'],
   \'r' : ['BraceyReload', 'Reload server'],
 \}
+
+"test comment
 
 call leaderGuide#register_prefix_descriptions(",","g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide ','<CR>
