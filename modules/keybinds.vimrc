@@ -66,10 +66,10 @@ map L $
 "endfor
 
 "Use control HJKL to move around vim splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <Leader>j <C-W><C-J>
+nnoremap <Leader>k <C-W><C-K>
+nnoremap <Leader>l <C-W><C-L>
+nnoremap <Leader>h <C-W><C-H>
 
 " Saving files that require sudo access
 command! -nargs=0 Sw w !sudo tee % > /dev/null
@@ -81,6 +81,10 @@ nnoremap <expr> zA &foldlevel ? 'zM' :'zR'
 let g:ctrlp_map = ''
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
+
+" Size v-splits
+map <Space>= :vertical resize +10<CR>
+map <Space>- :vertical resize -10<CR>
 
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
@@ -95,7 +99,7 @@ nnoremap <Leader>X #``cgN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " {{{
 " Toggle nerd tree
-map <C-e> :NERDTreeToggle<CR>
+map <Leader>e :NERDTreeToggle<CR>
 
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
