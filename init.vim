@@ -8,5 +8,6 @@ source $HOME/.config/nvim/modules/misc.vimrc
 
  "Include matching uppercase words with lowercase search term
 set ignorecase
+
  "Include only uppercase words with uppercase search term
 set smartcase

@@ -1,9 +1,4 @@
 " Vim settings 
-" {{{
-"
-"
-"
-" }}}
 set termguicolors
 
 " Set relative numbers
@@ -36,13 +31,6 @@ set nocompatible
 
 " Automatically wrap text that extends beyond the screen length.
 set wrap
-
-" Remember folds 
-"augroup remember_folds
-  "autocmd!
-  "autocmd BufWinLeave * silent! mkview
-  "autocmd BufWinEnter * silent! loadview
-"augroup END
 
 " Encoding
 set encoding=utf-8
