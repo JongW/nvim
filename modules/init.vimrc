@@ -1,5 +1,4 @@
 " Specify a directory for plugins 
-
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Themeing
@@ -25,6 +24,9 @@ Plug 'tpope/vim-surround'
 Plug 'turbio/bracey.vim'
 Plug 'alvan/vim-closetag'
 
+" Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
 " General utility
 Plug 'xolox/vim-session'
 Plug 'scrooloose/nerdcommenter'
@@ -33,9 +35,6 @@ Plug 'tpope/vim-fugitive'
 
 " General vim utility
 Plug 'hecal3/vim-leader-guide'
-
-" Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',

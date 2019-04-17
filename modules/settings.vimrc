@@ -78,7 +78,6 @@ set hidden
 set noshowmode 
 
 let g:mkdp_browser = 'qutebrowser'
-
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""

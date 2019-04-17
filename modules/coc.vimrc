@@ -73,7 +73,7 @@ function! s:show_documentation()
 endfunction
 
 " Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+"nmap <leader>rn <Plug>(coc-rename)
 
 augroup mygroup
   autocmd!
@@ -90,7 +90,7 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 " Remap for do codeAction of current line
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
+"nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Use `:Format` for format current buffer
 command! -nargs=0 Format :call CocAction('format')

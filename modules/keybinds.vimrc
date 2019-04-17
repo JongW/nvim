@@ -24,9 +24,12 @@ nnoremap <Up> <c-y>
 
 " Quick save
 map <Leader>w :update<CR>
-map <Leader>qq :q!<CR>
+map <Leader>q :q<CR>
 map <Leader>s :wq<CR>
 map <Leader>d :bd<CR>
+
+" Open register
+map <Leader>r :register<CR>
 
 " Quick Brackets
 inoremap (; (<CR>);<C-c>O
@@ -82,6 +85,10 @@ nnoremap <C-p> :bprev<CR>
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" Replace x 
+nnoremap <Leader>x *``cgn
+nnoremap <Leader>X #``cgN
 " }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                       "Plugin Keybinds
@@ -120,8 +127,8 @@ map , <Plug>(clever-f-repeat-back)
 " Markdown preview
 map <silent> <F8> <Plug>MarkdownPreview
 
-nnoremap <Leader>x *``cgn
-nnoremap <Leader>X #``cgN
+" Tag bar
+map <Leader>b :Tagbar<CR>
 " }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                       "Leader guide
