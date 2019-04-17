@@ -27,13 +27,12 @@ Plug 'alvan/vim-closetag'
 
 " General utility
 Plug 'xolox/vim-session'
-Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 
 " General vim utility
-Plug 'vim-scripts/cmdalias.vim'
+Plug 'hecal3/vim-leader-guide'
 
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
@@ -58,9 +57,9 @@ Plug 'prettier/vim-prettier', {
     \ 'html',
     \ 'swift' ] }
 
-Plug 'hecal3/vim-leader-guide'
 call plug#end()
 
+" Unused plugins {{{
 "Plug 'ap/vim-css-color'
 "Plug 'Yggdroot/indentLine'
 "Plug 'gko/vim-coloresque'
@@ -70,7 +69,8 @@ call plug#end()
 "Plug 'plasticboy/vim-markdown'
 "Plug 'suan/vim-instant-markdown'
 "Plug 'j-tom/vim-old-hope'
+"Plug 'vim-scripts/cmdalias.vim'
 "Plug 'shime/vim-livedown'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" }}}
 
-"test3
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

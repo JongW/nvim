@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                       "Default vim keybinds
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" {{{
 " Map space as the leader key
 let mapleader = " "
 
@@ -24,6 +24,24 @@ nnoremap <Up> <c-y>
 
 " Quick save
 map <Leader>w :update<CR>
+map <Leader>qq :q!<CR>
+map <Leader>s :wq<CR>
+map <Leader>d :bd<CR>
+
+" Quick Brackets
+inoremap (; (<CR>);<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap {; {<CR>};<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap [; [<CR>];<C-c>O
+inoremap [, [<CR>],<C-c>O
+
+inoremap "<TAB> ""<C-c>i
+inoremap '<TAB> ''<C-c>i
+inoremap {<TAB> {}<C-c>i
+inoremap [<TAB> []<C-c>i
+inoremap (<TAB> ()<C-c>i
+
 " set :noh
 nnoremap <Leader>/ :nohlsearch<cr>
 
@@ -61,23 +79,19 @@ let g:ctrlp_map = ''
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+" }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                       "Plugin Keybinds
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
 " Toggle nerd tree
 map <C-e> :NERDTreeToggle<CR>
 
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
-
-"Aliases
-autocmd VimEnter * Alias p CtrlP
-autocmd VimEnter * Alias r register
-autocmd VimEnter * Alias b Bracey
-
-command S SaveSession
-command O OpenSession
-command R RestartVim
 
 nmap <Leader>1 <Plug>lightline#bufferline#go(1)
 nmap <Leader>2 <Plug>lightline#bufferline#go(2)
@@ -108,18 +122,20 @@ map <silent> <F8> <Plug>MarkdownPreview
 
 nnoremap <Leader>x *``cgn
 nnoremap <Leader>X #``cgN
-
+" }}}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                       "Leader guide
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
 let g:lmap = {}
 
+" First level leader bindings
 nmap <Leader>t <Plug>(Prettier)
 let g:lmap.t = ['Prettier', 'Format code']
 nnoremap <leader>cd :cd %:p:h<CR>
 let g:lmap.cd = ['cd %:p:h', 'cd file directory']
 
-" Create new menus not based on existing mappings:
+" 2nd level leader bindings
 let g:lmap.g = {
   \'name' : 'Git Menu',
   \'s' : ['Gstatus', 'Git Status'],
@@ -130,14 +146,16 @@ let g:lmap.g = {
   \'w' : ['Gwrite',  'Git Write'],
 \}
 
-" Create new menus not based on existing mappings:
 let g:lmap.z = {
   \'name' : 'Extra Commmands',
   \'b' : ['Bracey', 'Start server'],
   \'r' : ['BraceyReload', 'Reload server'],
+  \'s' : ['SaveSession', 'Save sesison'],
+  \'o' : ['OpenSession', 'Open session']
 \}
 
 call leaderGuide#register_prefix_descriptions(",","g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide ','<CR>
 vnoremap <silent> <leader> :<c-u>LeaderGuideVisual ','<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" }}}

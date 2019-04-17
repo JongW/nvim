@@ -1,12 +1,20 @@
 " Vim settings 
-
+" {{{
+"
+"
+"
+" }}}
 set termguicolors
 
 " Set relative numbers
 set nonu
 set rnu
-"set nu rnu
+
+" Decrease margin size
 set nuw=3
+
+" Enable marker folding
+ set foldmethod=marker 
 
 " For markdown plugins
 filetype plugin on
