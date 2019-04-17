@@ -126,6 +126,7 @@ let g:lmap.g = {
   \'p' : ['Gpull',   'Git Pull'],
   \'u' : ['Gpush',   'Git Push'],
   \'c' : ['Gcommit', 'Git Commit'],
+  \'a' : ['Gcommit -a', 'Git commit ALL'],
   \'w' : ['Gwrite',  'Git Write'],
 \}
 
